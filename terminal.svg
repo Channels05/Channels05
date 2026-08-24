@@ -99,8 +99,7 @@
 
         <div class="terminal-grid">
           <!-- Columna Izquierda: Pega tu Arte ASCII aquí -->
-          <div class="ascii-art">
-     ::+                           
+          <div class="ascii-art">                     
                                                                  :****                         
                                                                  -*++-                         
                                                                  :+==-+                        
