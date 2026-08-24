@@ -100,10 +100,13 @@
         <div class="terminal-grid">
           <!-- Columna Izquierda: Pega tu Arte ASCII aquí -->
           <div class="ascii-art">
-        [bug]     /"*._         _
-      .-*'`    `*-.._.-'/
-    < * ))     ,       (
-      `*-._`._(__.--*"`.\
+       .--.
+      |o_o |
+      |:_/ |
+     //   \ \
+    (|     | )
+   /'\_   _/`\
+   \___)=(___/
           </div>
 
           <!-- Columna Derecha: Tarjeta de Información -->
