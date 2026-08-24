@@ -100,13 +100,10 @@
         <div class="terminal-grid">
           <!-- Columna Izquierda: Pega tu Arte ASCII aquí -->
           <div class="ascii-art">
-       .--.
-      |o_o |
-      |:_/ |
-     //   \ \
-    (|     | )
-   /'\_   _/`\
-   \___)=(___/
+          /"*._         _
+      .-*'`    `*-.._.-'/
+    < * ))     ,       (
+      `*-._`._(__.--*"`.\
 
           </div>
 
