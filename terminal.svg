@@ -34,7 +34,7 @@
         .ascii-art {
           color: #58a6ff;
           white-space: pre;
-          font-size: 6px;
+          font-size: 4px;
           line-height: 1.15;
           font-weight: bold;
           opacity: 0;
