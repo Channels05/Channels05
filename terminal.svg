@@ -1,0 +1,176 @@
+<svg fill="none" viewBox="0 0 850 430" width="850" height="430" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          background-color: #0d1117;
+          border: 1px solid #30363d;
+          border-radius: 12px;
+          padding: 24px 28px;
+          font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+          color: #c9d1d9;
+          font-size: 13.5px;
+          line-height: 1.5;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .header {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 20px;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-grid {
+          display: flex;
+          gap: 32px;
+          align-items: flex-start;
+        }
+
+        .ascii-art {
+          color: #58a6ff;
+          white-space: pre;
+          font-size: 9px;
+          line-height: 1.15;
+          font-weight: bold;
+          opacity: 0;
+          animation: fadeIn 0.8s ease-in forwards 0.2s;
+        }
+
+        .info-card {
+          flex: 1;
+        }
+
+        /* Animación escalonada que hace aparecer cada línea */
+        .line {
+          opacity: 0;
+          transform: translateX(-6px);
+          animation: slideIn 0.35s ease-out forwards;
+        }
+
+        .l-1 { animation-delay: 0.3s; }
+        .l-2 { animation-delay: 0.5s; }
+        .l-3 { animation-delay: 0.7s; }
+        .l-4 { animation-delay: 0.9s; }
+        .l-5 { animation-delay: 1.1s; }
+        .l-6 { animation-delay: 1.3s; }
+        .l-7 { animation-delay: 1.5s; }
+        .l-8 { animation-delay: 1.7s; }
+        .l-9 { animation-delay: 1.9s; }
+
+        .key { color: #79c0ff; font-weight: bold; }
+        .val { color: #e6edf3; }
+        .highlight { color: #7ee787; font-weight: 500; }
+        .user-host { color: #58a6ff; font-weight: bold; font-size: 15px; }
+
+        .palette {
+          display: flex;
+          gap: 8px;
+          margin-top: 14px;
+        }
+        .color-block { width: 22px; height: 12px; border-radius: 2px; }
+
+        .cursor {
+          display: inline-block;
+          width: 8px;
+          height: 15px;
+          background: #58a6ff;
+          vertical-align: middle;
+          margin-left: 4px;
+          animation: blink 1s infinite;
+        }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
+        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+      </style>
+
+      <div class="container">
+        <!-- Botones de la ventana -->
+        <div class="header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+
+        <div class="terminal-grid">
+          <!-- Columna Izquierda: Pega tu Arte ASCII aquí -->
+          <div class="ascii-art">
+     -:-+======-------------===================
+:-:=+=====-------------===================
+-:-:======--------------==================
+--:-:+====---------------=================
+=--:-:=====-----------------===========---
+%=-:::=====--------------------=----------
++--::-:====--------::    :------==--------
++@=::::-===---:...:....... .-----====--===
+@@*-:::-=----:::==+=-:....   -----========
+@@*-:::-=----++##***+=====-:.:============
+@@*-:::-=----=#%###*++++===-.:============
+@@*-:::-=----+#*=..:==-...:-.-------------
+@%+-:::=+=---+#+=..-*=:..::=:+************
+@%=-:-:++=-==#%#*++##=---====-------------
+@#=-:::*+====+##*****=====+++*+=+**++++++=
+@*-:::-++-==+##****#*---==++*%@@@@@@@@@@@@
+*+::::=-. -=++*#*#**++--==++@@@@@@@@@@@@@@
+-::.:...:::=+*#**++**==--===-#==++*###%%%*
+--=.:...----*+*=*+=+-::---=::----======++=
+.. --::::::-=+=:#+*++=-:--:.-.:-:-:::--==-
+ -==+====-====-.-**+::::-:.......::--:::::
+=:-=+=-:-=====-: -+*+=--:.........::::::-:
+:.-===:-======-:  ....    :........:::::::
+..-----=======--=*%%%%%##=:   ......::::::
+..:-====+====-:.+#%%%%%*=::  ..... .::::::
+..:-=+=-:     .--%%%%#*==-   .:::...:-::::
+. -.           :-*%#**+=*.  .::-::..::::::
+..:.           ::-#**++*#. .::--::::.:-:::
+..::.   ........:-******#:..::--::::..-:::
+..::   .::::...::=***#*#%=..::--::::. ::::
+.:..  .::::. ..:.=*****#%*.:::---:::. .:::
+
+          </div>
+
+          <!-- Columna Derecha: Tarjeta de Información -->
+          <div class="info-card">
+            <div class="line l-1">
+              <span class="user-host">felipe@santiago</span>
+            </div>
+            <div class="line l-2" style="color: #30363d;">----------------------------------</div>
+            <div class="line l-3">
+              <span class="key">Role:</span> <span class="val">Data Science Engineering Student</span>
+            </div>
+            <div class="line l-4">
+              <span class="key">Focus:</span> <span class="val">Backend &amp; Distributed Data Systems</span>
+            </div>
+            <div class="line l-5">
+              <span class="key">Stack:</span> <span class="highlight">Python, FastAPI, DuckDB, React</span>
+            </div>
+            <div class="line l-6">
+              <span class="key">Hardware:</span> <span class="val">Raspberry Pi 3 (BLE Proximity)</span>
+            </div>
+            <div class="line l-7">
+              <span class="key">Hobbies:</span> <span class="val">Running, 35mm Analog Photography</span>
+            </div>
+            <div class="line l-8">
+              <span class="key">Status:</span> <span class="val">Building projects &amp; training</span><span class="cursor"></span>
+            </div>
+
+            <!-- Bloques de color tipo Neofetch -->
+            <div class="line l-9 palette">
+              <span class="color-block" style="background: #ff7b72;"></span>
+              <span class="color-block" style="background: #ffa657;"></span>
+              <span class="color-block" style="background: #d29922;"></span>
+              <span class="color-block" style="background: #7ee787;"></span>
+              <span class="color-block" style="background: #79c0ff;"></span>
+              <span class="color-block" style="background: #d2a8ff;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
